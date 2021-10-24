@@ -1,15 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Sass/main.scss';
+import {UserContext} from './UserContext';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Login from './Pages/Login';
 import Home from './Pages/Home';
 
 function App() {
+
+	const [user, setUser] = useState(null);
+
 	return (
 		<Router>
 			<Switch>
-				<Route exact path="/login" component={Login}></Route>
-				<Route exact path="/" component={Home}></Route>
+				<UserContext.Provider value={{user,setUser}}>
+					<Route exact path="/login" component={Login}></Route>
+					<Route exact path="/" component={Home}></Route>
+				</UserContext.Provider>
 			</Switch>
 		</Router>
 	);

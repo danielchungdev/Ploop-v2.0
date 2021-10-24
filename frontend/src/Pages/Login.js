@@ -1,15 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import Logo from '../Assets/Ploop.svg'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import Typography from '@mui/material/Typography'
+import { UserContext } from '../UserContext';
 
 export default function Login() {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const {user, setUser} = useContext(UserContext);
 
-    const login = () => {
-        alert("login has been clicked")
+    const login = (e) => {
+        e.preventDefault();
+        alert("login has been clicked");
     }
 
     return (
