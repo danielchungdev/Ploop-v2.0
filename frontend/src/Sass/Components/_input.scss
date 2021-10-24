@@ -1,0 +1,16 @@
+.input--component{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.input--component input[type=text]{
+    height: 50px;
+    border-style: none;
+    background-color: rgba(196, 196, 196, 0.47);
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.5rem;
+}
