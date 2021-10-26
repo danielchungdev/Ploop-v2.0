@@ -42,7 +42,7 @@ app.post('/signup', (req, res)=> {
   }
   client.connect(async (err) => {
     const collection = client.db("Ploop").collection("Users");
-    if (collection.findOne({username: userDB})){
+    if (await collection.findOne({username: userDB})){
       res.sendStatus(409)
     }
     else{
