@@ -14,19 +14,43 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+//This is the login route.
 app.post('/login', (req, res) => {
-    console.log(req)
-    const {username: userDB, password: passDB} = req.body
-    client.connect(async (err) => {
-        const collection = client.db("Ploop").collection("Users");
-        let user = await collection.findOne({username: userDB})
-        if (user && user.password === passDB){
-            console.log(true)
-        }
-        else{
-            console.log(false)
-        }
-    });
+  const {username: userDB, password: passDB} = req.body
+  client.connect(async (err) => {
+      const collection = client.db("Ploop").collection("Users");
+      let user = await collection.findOne({username: userDB})
+      if (user && user.password === passDB){
+          res.sendStatus(200)
+          console.log(username + " has logged in!")
+      }
+      else{
+          res.send(404)
+      }
+  });
+})
+
+//This is the sign up route.
+app.post('/signup', (req, res)=> {
+  console.log(req.body)
+  const {username: userDB, password: passwordDB, email: emailDB, gender:genderDB} = req.body;
+  const user = {
+    username: userDB, 
+    password: passwordDB, 
+    email: emailDB, 
+    gender: genderDB
+  }
+  client.connect(async (err) => {
+    const collection = client.db("Ploop").collection("Users");
+    if (collection.findOne({username: userDB})){
+      res.sendStatus(409)
+    }
+    else{
+      await collection.insertOne(user)
+      console.log("user (" + userDB + ", " + passwordDB + ", " + emailDB + ", " + genderDB + ") has been added!")
+      res.sendStatus(200)
+    }
+});
 })
 
 app.listen(port, () => {
