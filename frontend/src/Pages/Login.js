@@ -8,12 +8,41 @@ export default function Login() {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const [emptyFieldsError, setEmptyFieldsError] = useState(false)
     const {user, setUser} = useContext(UserContext);
 
-    const login = (e) => {
-        e.preventDefault();
-        alert("login has been clicked");
+    const checkEmptyFields= () => {
+        if (username === "" || password === ""){
+            setEmptyFieldsError(true);
+        }
     }
+
+    const login = (e) => {
+        //TODO security check for empty fields
+        checkEmptyFields()
+        if (emptyFieldsError === false){
+            e.preventDefault();
+            fetch('http://localhost:4000/login', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    username,
+                    password
+                })
+            })
+            .then((res)=> {
+                setUser(username)
+                history.push("/")
+            })
+            .catch((error)=> {
+                console.log(error)
+            })
+        }
+    }
+
+    const history = useHistory()
 
     return (
         <div className="login--container">
@@ -27,8 +56,9 @@ export default function Login() {
                 <input type="password" onChange={e=>setPassword(e.target.value)}/>
             </div>
             <p className="links"><Link to="#">Forgot password?</Link></p>
+            {emptyFieldsError ? <p className="error">There are empty fields!</p>: null}
             <button className="normal--button" onClick={login}>Log In</button>
-            <p className="links">Don't have an account? <Link to="#">Sign up</Link></p>
+            <p className="links">Don't have an account? <Link to="/signup">Sign up</Link></p>
         </div>
     )
 }

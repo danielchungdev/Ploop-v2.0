@@ -4,5 +4,9 @@
     color: $text-color-two;
     font-size: 1.3rem;
     border-radius: 15px;
+    width: 100%;
 }
 
+.normal--button:hover{
+    background-color: rgb(114, 59, 7);
+}
