@@ -48,7 +48,7 @@ export default function Login() {
         <div className="login--container">
             <img src={Logo} alt="Ploop-logo"/>
             <div className="input--component">
-                <Typography variant="subtitle1">Username or Email</Typography>
+                <Typography variant="subtitle1">Username</Typography>
                 <input type="text" onChange={e=>setUsername(e.target.value)}/>
             </div>
             <div className="input--component">
