@@ -20,9 +20,9 @@ app.post('/login', (req, res) => {
   client.connect(async (err) => {
       const collection = client.db("Ploop").collection("Users");
       let user = await collection.findOne({username: userDB})
-      if (user && user.password === passDB){
+      if (user !== null&& user.password === passDB){
           res.sendStatus(200)
-          console.log(username + " has logged in!")
+          console.log(userDB + " has logged in!")
       }
       else{
           res.send(404)
