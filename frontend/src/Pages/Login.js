@@ -9,18 +9,27 @@ export default function Login() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [emptyFieldsError, setEmptyFieldsError] = useState(false)
+    const [wrongCredentials, setWrongCredentials] = useState(false)
     const {user, setUser} = useContext(UserContext);
+
+    const resetErrors = () => {
+        setEmptyFieldsError(false)
+        setWrongCredentials(false)
+    }
 
     const checkEmptyFields= () => {
         if (username === "" || password === ""){
-            setEmptyFieldsError(true);
+            setEmptyFieldsError(true)
+            return false
+        }
+        else{
+            return true
         }
     }
 
     const login = (e) => {
-        //TODO security check for empty fields
-        checkEmptyFields()
-        if (emptyFieldsError === false){
+        resetErrors()
+        if (checkEmptyFields()){
             e.preventDefault();
             fetch('http://localhost:4000/login', {
                 method: "POST",
@@ -33,8 +42,13 @@ export default function Login() {
                 })
             })
             .then((res)=> {
-                setUser(username)
-                history.push("/")
+                if (res === 200){
+                    setUser(username)
+                    history.push("/")
+                }
+                else {
+                    setWrongCredentials(true)
+                }
             })
             .catch((error)=> {
                 console.log(error)
@@ -57,6 +71,7 @@ export default function Login() {
             </div>
             <p className="links"><Link to="#">Forgot password?</Link></p>
             {emptyFieldsError ? <p className="error">There are empty fields!</p>: null}
+            {wrongCredentials ? <p className="error">Wrong credentials. Try again or make a <Link to="/signup">new account!</Link></p>: null}
             <button className="normal--button" onClick={login}>Log In</button>
             <p className="links">Don't have an account? <Link to="/signup">Sign up</Link></p>
         </div>
