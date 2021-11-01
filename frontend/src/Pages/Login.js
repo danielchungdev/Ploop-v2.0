@@ -42,7 +42,7 @@ export default function Login() {
                 })
             })
             .then((res)=> {
-                if (res === 200){
+                if (res.status === 200){
                     setUser(username)
                     history.push("/")
                 }
