@@ -82,7 +82,7 @@ export default function Signup() {
                 <input type="password" onChange={e=>setPassword(e.target.value)}/>
             </div>
             <div className="input--component signup--margin">
-                <Typography variant="subtitle1">Confirm Password</Typography>
+            <Typography variant="subtitle1">Confirm Password</Typography>
                 <input type="password" onChange={e=>setConfirmPassword(e.target.value)}/>
             </div>
             <div className="input--component signup--margin">
