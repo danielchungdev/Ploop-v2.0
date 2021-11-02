@@ -3,6 +3,9 @@ import Default from '../Assets/Defaults/toilet.png'
 import { Typography, Rating } from '@mui/material'
 import { Link } from 'react-router-dom'
 
+//Component Usage...
+//<BathroomCard rating={int} distance="string"/>
+
 export default function BathroomCard(props) {
     return (
         <Link to="/:id" className='bathroom--card'>

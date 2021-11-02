@@ -25,7 +25,7 @@ app.post('/login', (req, res) => {
           console.log(userDB + " has logged in!")
       }
       else{
-          res.send(404)
+          res.sendStatus(404)
       }
   });
 })
