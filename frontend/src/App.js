@@ -18,9 +18,7 @@ function App() {
 					<Route exact path="/login" component={Login}></Route>
 					<Route exact path="/" component={Home}></Route>
 					<Route exact path="/signup" component={Signup}></Route>
-					<Route exact path="/restrooms">
-						<Redirect to="/"/>
-					</Route>
+					<Route exact path="/restrooms"><Redirect to="/"/></Route>
 					<Route exact path="/restrooms/:id" component={Restroom}></Route>
 				</UserContext.Provider>
 				</Switch>
