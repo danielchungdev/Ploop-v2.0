@@ -6,6 +6,8 @@ import Login from './Pages/Login';
 import Home from './Pages/Home';
 import Signup from './Pages/Signup';
 import Restroom from './Pages/Restroom';
+import Notfound from './Pages/Notfound';
+
 
 function App() {
 
@@ -13,15 +15,15 @@ function App() {
 
 	return (
 		<Router>
+			<UserContext.Provider value={{user,setUser}}>
 				<Switch>
-				<UserContext.Provider value={{user,setUser}}>
 					<Route exact path="/login" component={Login}></Route>
 					<Route exact path="/" component={Home}></Route>
 					<Route exact path="/signup" component={Signup}></Route>
-					<Route exact path="/restrooms"><Redirect to="/"/></Route>
-					<Route exact path="/restrooms/:id" component={Restroom}></Route>
-				</UserContext.Provider>
+					<Route exact component={Notfound}/>
+          <Route exact path="/restrooms/:id" component={Restroom}></Route>
 				</Switch>
+			</UserContext.Provider>
 		</Router>
 	);
 }
