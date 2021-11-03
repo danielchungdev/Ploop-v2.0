@@ -1,20 +1,13 @@
 .comment--card--container{
     background-color: $accent-color;
-
     display:flex;
     align-items:last baseline;
     justify-content: space-evenly;
-
     border-radius: 10px;
     width:80%;
     min-height: 15%;
-
     padding:4% 10% 4% 10%;
-
     margin-bottom:2vh;
-
-
-
 }
 
 .comment--card--img{
@@ -31,6 +24,5 @@
     width:80%;
     margin-left:40px;
     font-size:1rem;
-
     overflow-wrap:break-word;
     }
