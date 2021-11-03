@@ -1,0 +1,25 @@
+
+
+.notfound--container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.notfound--container img{
+    width: 50%;
+    align-self: center;
+    margin-bottom: 5%;
+}
+
+.notfound--container p{
+    text-align: center;
+    font-size: 140%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.notfound--container h1 {
+    text-align: center;
+}
