@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Login from './Pages/Login';
 import Home from './Pages/Home';
 import Signup from './Pages/Signup'
+import Notfound from './Pages/Notfound';
 
 function App() {
 
@@ -12,13 +13,14 @@ function App() {
 
 	return (
 		<Router>
-			<Switch>
-				<UserContext.Provider value={{user,setUser}}>
+			<UserContext.Provider value={{user,setUser}}>
+				<Switch>
 					<Route exact path="/login" component={Login}></Route>
 					<Route exact path="/" component={Home}></Route>
 					<Route exact path="/signup" component={Signup}></Route>
-				</UserContext.Provider>
-			</Switch>
+					<Route exact component={Notfound}/>
+				</Switch>
+			</UserContext.Provider>
 		</Router>
 	);
 }
