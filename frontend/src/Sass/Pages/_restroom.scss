@@ -1,0 +1,42 @@
+.restroom--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.restroom--container--img{
+    width: 60%;
+    align-self: center;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.restroom--container p{
+    font-size:1.2rem;
+    font-weight: 500;
+    margin-right:2%;
+}
+
+.restroom--rating{
+    margin:auto;
+}
+
+.restroom--tag{
+    margin-top:8%;
+}
+
+.restroom--tag div{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-top:2%;
+}
+
+.restroom--comments{
+    margin-top:4vh;
+}
+
+

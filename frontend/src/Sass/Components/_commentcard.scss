@@ -1,0 +1,28 @@
+.comment--card--container{
+    background-color: $accent-color;
+    display:flex;
+    align-items:last baseline;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    width:80%;
+    min-height: 15%;
+    padding:4% 10% 4% 10%;
+    margin-bottom:2vh;
+}
+
+.comment--card--img{
+    border-radius: 50%;
+    width:15%;
+    height:15%;
+    padding:2%;
+    margin-right:4%;
+    background-color: #e6e6e6;
+}
+
+.comment--card--p{
+    color:white;
+    width:80%;
+    margin-left:40px;
+    font-size:1rem;
+    overflow-wrap:break-word;
+    }
