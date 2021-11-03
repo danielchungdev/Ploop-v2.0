@@ -3,7 +3,7 @@
 ## To do list
 
 - ~~404 Page (NOT FOUND PATH) DANIEL~~
-- Dynamic Restroom description page BRANDON
+- ~~Dynamic Restroom description page BRANDON~~
 - Dynamic pathing to restroom pages backend 
 - Geolocation feature in general (Research if it actively tracks you)
 - Adding a bathroom button + Page
