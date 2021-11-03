@@ -13,14 +13,14 @@ function App() {
 
 	return (
 		<Router>
-				<UserContext.Provider value={{user,setUser}}>
 				<Switch>
+				<UserContext.Provider value={{user,setUser}}>
 					<Route exact path="/login" component={Login}></Route>
 					<Route exact path="/" component={Home}></Route>
 					<Route exact path="/signup" component={Signup}></Route>
 					<Route path="/:id" component={Restroom}></Route>
-				</Switch>
 				</UserContext.Provider>
+				</Switch>
 		</Router>
 	);
 }
