@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 export default function BathroomCard(props) {
     return (
-        <Link to={`/${props.id}`} className='bathroom--card'>
+        <Link to={`/restrooms/${props.id}`} className='bathroom--card'>
             <div className="bathroom--content">
                 <img src={Default} alt="Default bathroom picture"/>
                 <Typography component="legend">{props.distance}</Typography>
