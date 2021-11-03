@@ -52,5 +52,6 @@ export default function Restroom(props){
                 {comments.slice(0,loaded).map((comment)=> <CommentCard comment={comment}/>)}
                 {comments.length > loaded ? <button className="normal--button" onClick = {loadMore}>Load More</button>:null}
             </div>
-        </div>)
+        </div>
+    )
 }
