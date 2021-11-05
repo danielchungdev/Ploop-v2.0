@@ -6,8 +6,9 @@
 - ~~Dynamic Restroom description page BRANDON~~
 - Dynamic pathing to restroom pages backend 
 - Geolocation feature in general (Research if it actively tracks you)
-- Adding a bathroom button + Page
-- Backend for adding a bathroom button + Page
+- Adding a bathroom button in home
+- Adding a the add bathroom page DANIEL
+- Backend for adding a bathroom button
 - Displaying all nearby bathrooms
 - Backend for displaying all nearby bathrooms 
 - User profile page
