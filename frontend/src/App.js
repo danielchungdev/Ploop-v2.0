@@ -21,6 +21,7 @@ function App() {
 					<Route exact path="/" component={Home}></Route>
 					<Route exact path="/signup" component={Signup}></Route>
           			<Route exact path="/restrooms/:id" component={Restroom}></Route>
+          			<Route exact path="/addrestroom/" component={addrestroom}></Route>
 					<Route exact component={Notfound}/>
 				</Switch>
 			</UserContext.Provider>
