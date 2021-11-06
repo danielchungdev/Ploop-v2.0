@@ -5,6 +5,7 @@
 - ~~404 Page (NOT FOUND PATH) DANIEL~~
 - ~~Dynamic Restroom description page BRANDON~~
 - Dynamic pathing to restroom pages backend 
+- Hover color on home bathrooms
 - Geolocation feature in general (Research if it actively tracks you)
 - Adding a bathroom button in home
 - Adding a the add bathroom page DANIEL
