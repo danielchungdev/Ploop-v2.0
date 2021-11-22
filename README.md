@@ -12,7 +12,7 @@
 - Backend for adding a bathroom button
 - Displaying all nearby bathrooms
 - Backend for displaying all nearby bathrooms 
-- User profile page
+- User profile page BRANDON
 - user profile backend 
 
 ## How to run
