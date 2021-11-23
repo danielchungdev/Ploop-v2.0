@@ -1,0 +1,20 @@
+.home--container{
+    margin:auto;
+  }
+
+.home--margin{
+    width:90%;
+    margin:auto;
+    margin-top:4vh;
+}
+
+
+
+.home--flex--items{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+}
+.home--flex--item{
+    padding:5vw;
+ }
