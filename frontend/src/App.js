@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import Signup from './Pages/Signup';
 import Restroom from './Pages/Restroom';
 import Notfound from './Pages/Notfound';
+import Settings from './Pages/Settings';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 					<Route exact path="/" component={Home}></Route>
 					<Route exact path="/signup" component={Signup}></Route>
           			<Route exact path="/restrooms/:id" component={Restroom}></Route>
+					  <Route exact path="/settings" component={Settings}></Route>
 					<Route exact component={Notfound}/>
 				</Switch>
 			</UserContext.Provider>

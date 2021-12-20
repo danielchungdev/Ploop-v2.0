@@ -1,0 +1,27 @@
+.settings--container{
+    margin:auto
+}
+
+.settings--banner{
+    background-color: #60543D;
+    width:100vw;
+    height:20vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings--img{
+    width:20vw;
+    height:20vw;
+    border-radius: 50%;
+    background-color: #e6e6e6;
+    padding:2%
+}
+
+.settings--name{
+    color:white;
+    margin-left:20px;
+    font-size:1.5rem;
+    overflow-wrap:break-word;
+ }
